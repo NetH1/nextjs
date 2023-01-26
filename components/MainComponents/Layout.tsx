@@ -1,0 +1,19 @@
+import { FC, ReactNode } from "react";
+import { Footer } from "./Footer";
+import Header from "./Header";
+
+interface LayoutProps{
+  children: ReactNode;
+};
+
+export const Layout: FC<LayoutProps> = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <div className="bg-yellow-400 py-14 text-white text-xl">
+      {children}
+      </div>
+      <Footer />
+    </>
+  );
+};
